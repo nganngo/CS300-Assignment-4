@@ -20,11 +20,12 @@ int main(){
     BST <BarCodeItem> b;
     while(getline(file, line)){
         stringstream ss(line);    
-        getline(ss, barcode,','); //uses , as splitter instead of white space 
+        getline(ss, barcode,','); //uses , as splitter instead of white space.
         getline(ss, item,',');
         BarCodeItem a(barcode, item);
         b.insert(a);
     }
+    
     string upc;
     cout << "UPC Code: ";
     cin >> upc;
